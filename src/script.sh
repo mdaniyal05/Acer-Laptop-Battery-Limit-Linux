@@ -1,8 +1,8 @@
 #!/bin/bash
 
-DIR="/sys/bus/wmi/drivers/acer-wmi-battery/health_mode"
+FILE="/sys/bus/wmi/drivers/acer-wmi-battery/health_mode"
 
-if [[ ! -d "$DIR" ]]; then
+if [[ ! -f "$FILE" ]]; then
   git clone https://github.com/frederik-h/acer-wmi-battery.git
   cd acer-wmi-battery
 
